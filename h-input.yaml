@@ -1,8 +1,8 @@
 website_link: ""
 username: ""
-password: ""   # https://myaccount.google.com/u/1/apppasswords
+password: ""
 email_sender: ""
-email_password: ""
+email_password: ""  # https://myaccount.google.com/u/1/apppasswords
 email_host: "smtp.gmail.com"
 email_port: 587
 
