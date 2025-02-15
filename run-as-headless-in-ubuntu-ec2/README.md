@@ -1,12 +1,16 @@
 ## Set the timezone to Asia/Kolkata
+---
 ```bash
 timedatectl list-timezones
 timedatectl set-timezone Asia/Kolkata
 timedatectl
 ```
-
+---
 
 ## Install Chrome Driver
+
+> [!NOTE]
+> [chrome-driver-portal](https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)
 
 ```bash
 wget https://storage.googleapis.com/chrome-for-testing-public/133.0.6943.53/linux64/chromedriver-linux64.zip
@@ -16,6 +20,7 @@ sudo mv chromedriver /usr/local/bin/
 sudo chmod +x /usr/local/bin/chromedriver
 chromedriver --version
 ```
+---
 
 ## Install python3 & dependencies
 
@@ -31,7 +36,7 @@ source myenv/bin/activate
 pip install schedule yaml datetime pytz random --break-system-packages
 pip3 install selenium webdriver-manager pyyaml schedule pytz --break-system-packages
 ```
-{: .warning}
+> [!WARNING]
 > use python virtual env if you want to use --break-system-packages.
 > As ubuntu is a secure system, it won't allow to use without virtual env.
 
@@ -40,7 +45,7 @@ pip3 install selenium webdriver-manager pyyaml schedule pytz --break-system-pack
 sudo apt install -y xvfb
 Xvfb :99 -screen 0 1920x1080x16 & export DISPLAY=:99
 ```
-
+---
 ## Systemd Service
 
 ```bash
@@ -71,6 +76,6 @@ systemctl status attendance.service
 journalctl -u attendance.service -f
 journalctl -u attendance.service -f --no-pager -n 50
 ```
-
+---
 ## log directory
-### /var/log/attendance.log
+>> /var/log/attendance.log
